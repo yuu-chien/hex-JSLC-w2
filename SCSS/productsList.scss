@@ -3,3 +3,26 @@
 
 @import "./utils/variables";
 @import "./utils/utilities";
+
+@import "./components/card";
+
+* {
+    outline: 1px solid teal;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.main-view {
+    height: 60vh;
+    background: url(https://cdn.shopify.com/s/files/1/0680/1159/products/BS503M_Boardies_Overlay_Mid_Length_Swim_Shorts_-_3_1200x1800.jpg?v=1592843405) no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.card {
+    width: 33%;
+}
