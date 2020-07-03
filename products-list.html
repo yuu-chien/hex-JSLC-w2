@@ -12,7 +12,7 @@
         <h2 class="font-primary fz-lg fw-bold">MEN</h2>
     </section >
 
-    <section>
+    <section id="app">
         <div class="container">
             <nav>
                 <ul class="d-flex pt-1 pb-1">
@@ -21,20 +21,20 @@
                     <li class="mr-xs font-primary fz-xs">PANTS</li>
                 </ul>
             </nav>
-            <ul class="d-flex flex-wrap-w">
-                <li class="card mb-1">
+            <ul class="product-list d-flex flex-wrap-w">
+                <li class="card mb-1" v-for="i in allProducts">
                     <a href="#">
                         <div class="card-img-wrap">
-                            <img src="https://cdn.shopify.com/s/files/1/0680/1159/products/BS467M_Balloon_Animals_Mid_Shorts_Front_700x.jpg?v=1590477083" alt="">
+                            <img :src="i.imageUrl" alt="">
                         </div>
                         <div class="card-txt-wrap d-flex flex-d-col jc-center ai-center pt-tiny pl-tiny pb-tiny pr-tiny">
-                            <p class="card-tit mb-tiny font-primary fz-sm fw-bold color-primary">DRY HEAT SHORTIE</p>
+                            <p class="card-tit mb-tiny font-primary fz-sm fw-bold color-primary">{{i.title}}</p>
                             <div class="card-dec">
-                                <p class="mb-tiny fz-ets color-basic-b">Escape the prickly heat and cool down with our cactus print shortie.</p>
+                                <p class="mb-tiny fz-ets color-basic-b">{{i.content}}</p>
                                 <p class="d-flex jc-center ai-center">
                                     <span class="mr-tiny">TWD </span>
-                                    <del class="mr-tiny fz-ets">2000</del>
-                                    <span>1900</span>
+                                    <del class="mr-tiny fz-ets">{{i.origin_price}}</del>
+                                    <span>{{i.price}}</span>
                                 </p>
                             </div>
                         </div>
@@ -43,11 +43,7 @@
             </ul>
         </div>
     </section>
-
-
-
-    <script>
-
-    </script>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="./JS/all.js"></script>
 </html>
