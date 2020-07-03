@@ -6,9 +6,9 @@
 
 @import "./components/card";
 
-* {
-    outline: 1px solid teal;
-}
+// * {
+//     outline: 1px solid teal;
+// }
 
 .container {
     max-width: 1200px;
@@ -25,4 +25,5 @@
 
 .card {
     width: 33%;
+    padding: 20px;
 }
